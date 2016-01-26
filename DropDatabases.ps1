@@ -2,7 +2,7 @@
 Param (
     [Parameter(Position=0, Mandatory=$true)][string] $User, 
     [Parameter(Position=0, Mandatory=$true)][string] $Password,
-    [Parameter(Position=0, Mandatory=$true)][string] $QualiName,
+    [Parameter(Position=0, Mandatory=$true)][string] $DBName,
     [Parameter(Position=0, Mandatory=$false)][string]$serverName = "DB01"
 )
 
@@ -55,4 +55,4 @@ function dropAndVerify([string]$databaseName,
 }
 
 Write-host "Staring to run Drop Databases"
-dropAndVerify $QualiName $ServerName $User $Password
+dropAndVerify $DBName $ServerName $User $Password
